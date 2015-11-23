@@ -1,0 +1,272 @@
+:- dynamic pozytywna_cecha/2, negatywna_cecha/2.
+
+film_jest(abouttime) :- gatunek_jest(drama, comedy, romance).
+film_jest(alien) :- gatunek_jest(horror, scifi) ; pozytywna_cecha(czuje, radosc).
+film_jest(armageddon) :- gatunek_jest(disaster) ; pozytywna_cecha(czuje, dobry_dzien).
+film_jest(bigherosix) :- gatunek_jest(animation, action, comedy) ; pozytywna_cecha(czuje, zmeczenie).
+film_jest(beautifulmind) :- gatunek_jest(biography, drama) ; pozytywna_cecha(czuje, zmotywowany). 
+film_jest(daylight) :- gatunek_jest(thriller, disaster).
+film_jest(forrestgump) :- gatunek_jest(drama, comedy) ; pozytywna_cecha(czuje, zly_nastroj).
+film_jest(intouchables) :- gatunek_jest(biography, comedy, drama) ; pozytywna_cecha(czuje, smutek).
+film_jest(loveactually) :- gatunek_jest(romanticcomedy).
+film_jest(romanholiday) :- gatunek_jest(romanticcomedy).
+film_jest(thegodfather) :- gatunek_jest(drama, crime).
+film_jest(thematrix) :- gatunek_jest(action, scifi) ; pozytywna_cecha(czuje, zniechecenie).
+film_jest(theshawshankredemption) :- gatunek_jest(drama) ; pozytywna_cecha(czuje, zadowolenie_z_siebie).
+film_jest(theshining) :- gatunek_jest(horror).
+film_jest(thetourist) :- gatunek_jest(thriller, romance).
+film_jest(titanic) :- gatunek_jest(disaster, melodrama) ; pozytywna_cecha(czuje, samotnosc).
+film_jest(twilight) :- gatunek_jest(horror, romance).
+film_jest(warphotographer) :- gatunek_jest(documentary).
+
+gatunek_jest(X, Y, Z) :- gatunek_jest(X, Y) ; gatunek_jest(X, Z) ; gatunek_jest(Y, Z).
+gatunek_jest(X, Y) :- gatunek_jest(X), gatunek_jest(Y).
+
+gatunek_jest(action) :- 
+    typ_osobowosci_jest(sangwinik) ;
+    typ_osobowosci_jest(choleryk).
+
+gatunek_jest(animation) :- 
+    typ_osobowosci_jest(sangwinik).
+
+gatunek_jest(biography) :- 
+    typ_osobowosci_jest(flegmatyk) ;
+    typ_osobowosci_jest(melancholik).
+
+gatunek_jest(comedy) :- 
+    typ_osobowosci_jest(sangwinik).
+
+gatunek_jest(crime) :- 
+    typ_osobowosci_jest(choleryk).
+
+gatunek_jest(disaster) :- 
+    typ_osobowosci_jest(choleryk) ;
+    typ_osobowosci_jest(melancholik).
+
+gatunek_jest(documentary) :- 
+    typ_osobowosci_jest(flegmatyk).
+
+gatunek_jest(drama) :- 
+    typ_osobowosci_jest(flegmatyk) ;
+    typ_osobowosci_jest(melancholik).
+
+gatunek_jest(horror) :- 
+    typ_osobowosci_jest(choleryk).
+
+gatunek_jest(melodrama) :- 
+    typ_osobowosci_jest(flegmatyk) ;
+    typ_osobowosci_jest(melancholik).
+
+gatunek_jest(romance) :- 
+    typ_osobowosci_jest(choleryk) ;
+    typ_osobowosci_jest(flegmatyk) ;
+    typ_osobowosci_jest(melancholik).
+
+gatunek_jest(romanticcomedy) :- 
+    gatunek_jest(comedy).
+
+gatunek_jest(scifi) :- 
+    typ_osobowosci_jest(choleryk) ;
+    typ_osobowosci_jest(sangwinik).
+
+gatunek_jest(thriller) :- 
+    typ_osobowosci_jest(choleryk) ;
+    typ_osobowosci_jest(sangwinik).
+
+typ_osobowosci_jest(choleryk) :-
+    pomocniczy_typ_osobowosci_jest(administrator) ;
+    pomocniczy_typ_osobowosci_jest(adwokat) ;
+    pomocniczy_typ_osobowosci_jest(mentor) ;
+    pomocniczy_typ_osobowosci_jest(prezenter).
+
+typ_osobowosci_jest(flegmatyk) :-
+    pomocniczy_typ_osobowosci_jest(doradca) ;
+    pomocniczy_typ_osobowosci_jest(dyrektor) ;
+    pomocniczy_typ_osobowosci_jest(inspektor).
+
+typ_osobowosci_jest(melancholik) :-
+    pomocniczy_typ_osobowosci_jest(adwokat) ;
+    pomocniczy_typ_osobowosci_jest(idealista) ;
+    pomocniczy_typ_osobowosci_jest(logik) ;
+    pomocniczy_typ_osobowosci_jest(strateg).
+
+typ_osobowosci_jest(sangwinik) :-
+    pomocniczy_typ_osobowosci_jest(animator) ;
+    pomocniczy_typ_osobowosci_jest(artysta) ;
+    pomocniczy_typ_osobowosci_jest(entuzjasta) ;
+    pomocniczy_typ_osobowosci_jest(innowator) ;
+    pomocniczy_typ_osobowosci_jest(opiekun) ;
+    pomocniczy_typ_osobowosci_jest(praktyk).
+
+pomocniczy_typ_osobowosci_jest(administrator) :- 
+    pozytywna_cecha(jest, energiczny),
+    pozytywna_cecha(jest, logiczny),
+    pozytywna_cecha(jest, odpowiedzialny),
+    pozytywna_cecha(jest, pracowity),
+    pozytywna_cecha(jest, racjonalny),
+    pozytywna_cecha(jest, sumienny),
+    pozytywna_cecha(jest, zorganizowany).
+
+pomocniczy_typ_osobowosci_jest(adwokat) :- 
+    pozytywna_cecha(jest, empatyczny),
+    pozytywna_cecha(jest, energiczny),
+    pozytywna_cecha(jest, entuzjastyczny),
+    pozytywna_cecha(jest, odpowiedzialny),
+    pozytywna_cecha(jest, sumienny),
+    pozytywna_cecha(jest, towarzyski),
+    pozytywna_cecha(jest, zorganizowany).
+
+pomocniczy_typ_osobowosci_jest(animator) :- 
+    pozytywna_cecha(jest, energiczny),
+    pozytywna_cecha(jest, inspirujacy),
+    pozytywna_cecha(jest, logiczny),
+    pozytywna_cecha(jest, przedsiebiorczy),
+    pozytywna_cecha(jest, racjonalny),
+    pozytywna_cecha(jest, spontaniczny),
+    pozytywna_cecha(jest, towarzyski),
+    negatywna_cecha(jest, zorganizowany).
+
+pomocniczy_typ_osobowosci_jest(artysta) :- 
+    pozytywna_cecha(jest, entuzjastyczny),
+    pozytywna_cecha(jest, inspirujacy),
+    negatywna_cecha(jest, odpowiedzialny),
+    pozytywna_cecha(jest, optymistyczny),
+    pozytywna_cecha(jest, spontaniczny),
+    pozytywna_cecha(jest, towarzyski),
+    pozytywna_cecha(jest, tworczy),
+    pozytywna_cecha(jest, wrazliwy),
+    negatywna_cecha(jest, zorganizowany).
+
+pomocniczy_typ_osobowosci_jest(doradca) :- 
+    pozytywna_cecha(jest, entuzjastyczny),
+    pozytywna_cecha(jest, inspirujacy),
+    negatywna_cecha(jest, logiczny),
+    pozytywna_cecha(jest, optymistyczny),
+    negatywna_cecha(jest, przedsiebiorczy),
+    negatywna_cecha(jest, racjonalny),
+    pozytywna_cecha(jest, serdeczny),
+    pozytywna_cecha(jest, towarzyski).
+
+pomocniczy_typ_osobowosci_jest(dyrektor) :- 
+    pozytywna_cecha(jest, inspirujacy),
+    pozytywna_cecha(jest, logiczny),
+    pozytywna_cecha(jest, odporny_na_stres),
+    pozytywna_cecha(jest, odpowiedzialny),
+    pozytywna_cecha(jest, przedsiebiorczy),
+    pozytywna_cecha(jest, racjonalny),
+    negatywna_cecha(jest, spontaniczny),
+    pozytywna_cecha(jest, sumienny),
+    negatywna_cecha(jest, towarzyski),
+    pozytywna_cecha(jest, tworczy),
+    pozytywna_cecha(jest, zorganizowany).
+
+pomocniczy_typ_osobowosci_jest(entuzjasta) :- 
+    pozytywna_cecha(jest, energiczny),
+    pozytywna_cecha(jest, entuzjastyczny),
+    negatywna_cecha(jest, odpowiedzialny),
+    pozytywna_cecha(jest, optymistyczny),
+    negatywna_cecha(jest, przedsiebiorczy),
+    pozytywna_cecha(jest, serdeczny),
+    negatywna_cecha(jest, sumienny),
+    pozytywna_cecha(jest, towarzyski),
+    pozytywna_cecha(jest, tworczy),
+    negatywna_cecha(jest, zorganizowany).
+
+pomocniczy_typ_osobowosci_jest(idealista) :- 
+    pozytywna_cecha(jest, logiczny),
+    negatywna_cecha(jest, odporny_na_stres),
+    pozytywna_cecha(jest, odpowiedzialny),
+    pozytywna_cecha(jest, racjonalny),
+    pozytywna_cecha(jest, serdeczny),
+    pozytywna_cecha(jest, towarzyski),
+    pozytywna_cecha(jest, wrazliwy).
+
+pomocniczy_typ_osobowosci_jest(innowator) :- 
+    pozytywna_cecha(jest, energiczny),
+    negatywna_cecha(jest, odpowiedzialny),
+    pozytywna_cecha(jest, optymistyczny),
+    pozytywna_cecha(jest, spontaniczny),
+    negatywna_cecha(jest, sumienny),
+    pozytywna_cecha(jest, towarzyski),
+    pozytywna_cecha(jest, tworczy).
+
+pomocniczy_typ_osobowosci_jest(inspektor) :- 
+    negatywna_cecha(jest, inspirujacy),
+    pozytywna_cecha(jest, logiczny),
+    pozytywna_cecha(jest, odpowiedzialny),
+    pozytywna_cecha(jest, przedsiebiorczy),
+    pozytywna_cecha(jest, racjonalny),
+    negatywna_cecha(jest, spontaniczny),
+    pozytywna_cecha(jest, sumienny),
+    negatywna_cecha(jest, tworczy),
+    negatywna_cecha(jest, wrazliwy),
+    pozytywna_cecha(jest, zorganizowany).
+
+pomocniczy_typ_osobowosci_jest(logik) :- 
+    pozytywna_cecha(jest, inspirujacy),
+    pozytywna_cecha(jest, logiczny),
+    pozytywna_cecha(jest, racjonalny),
+    negatywna_cecha(jest, spontaniczny),
+    pozytywna_cecha(jest, tworczy).
+
+pomocniczy_typ_osobowosci_jest(mentor) :- 
+    pozytywna_cecha(jest, empatyczny),
+    pozytywna_cecha(jest, logiczny),
+    pozytywna_cecha(jest, odpowiedzialny),
+    pozytywna_cecha(jest, sumienny),
+    pozytywna_cecha(jest, tworczy),
+    pozytywna_cecha(jest, ufny),
+    pozytywna_cecha(jest, wrazliwy).
+
+pomocniczy_typ_osobowosci_jest(opiekun) :- 
+    pozytywna_cecha(jest, cierpliwy),
+    negatywna_cecha(jest, odporny_na_stres),
+    pozytywna_cecha(jest, odpowiedzialny),
+    pozytywna_cecha(jest, pracowity),
+    pozytywna_cecha(jest, praktyczny),
+    pozytywna_cecha(jest, przedsiebiorczy),
+    pozytywna_cecha(jest, serdeczny),
+    pozytywna_cecha(jest, wytrwaly),
+    pozytywna_cecha(jest, zorganizowany).
+
+pomocniczy_typ_osobowosci_jest(opiekun) :- 
+    negatywna_cecha(jest, odporny_na_stres),
+    pozytywna_cecha(jest, odpowiedzialny),
+    pozytywna_cecha(jest, pracowity),
+    pozytywna_cecha(jest, praktyczny),
+    pozytywna_cecha(jest, przedsiebiorczy),
+    pozytywna_cecha(jest, serdeczny),
+    pozytywna_cecha(jest, zorganizowany).
+
+pomocniczy_typ_osobowosci_jest(praktyk) :- 
+    pozytywna_cecha(jest, entuzjastyczny),
+    pozytywna_cecha(jest, odporny_na_stres),
+    pozytywna_cecha(jest, odpowiedzialny),
+    pozytywna_cecha(jest, optymistyczny),
+    pozytywna_cecha(jest, sumienny).
+
+pomocniczy_typ_osobowosci_jest(prezenter) :- 
+    pozytywna_cecha(jest, empatyczny),
+    pozytywna_cecha(jest, energiczny),
+    pozytywna_cecha(jest, inspirujacy),
+    negatywna_cecha(jest, odpowiedzialny),
+    pozytywna_cecha(jest, optymistyczny),
+    pozytywna_cecha(jest, praktyczny),
+    negatywna_cecha(jest, przedsiebiorczy),
+    negatywna_cecha(jest, sumienny).
+
+pomocniczy_typ_osobowosci_jest(strateg) :- 
+    negatywna_cecha(jest, empatyczny),
+    pozytywna_cecha(jest, odporny_na_stres),
+    pozytywna_cecha(jest, przedsiebiorczy),
+    pozytywna_cecha(jest, sumienny),
+    pozytywna_cecha(jest, tworczy),
+    negatywna_cecha(jest, ufny),
+    pozytywna_cecha(jest, zorganizowany).
+
+pamietaj_pozytywna_ceche(X,Y) :- assertz(pozytywna_cecha(X,Y)).
+
+pamietaj_negatywna_ceche(X,Y) :- assertz(negatywna_cecha(X,Y)).
+
+wyczysc_fakty :- retractall(pozytywna_cecha(_,_)),
+                 retractall(negatywna_cecha(_,_)).

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="356.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.edu.agh.prolog.gui.FXMLDocumentController">
+   <center>
+      <Button fx:id="loadExpertButton" mnemonicParsing="false" onAction="#loadExpertAction" text="Załaduj eksperta" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="400.0" text="Dopasowywanie filmów na podstawie typów osobowości oraz usposobienia" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="30.0" />
+         </BorderPane.margin>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>
