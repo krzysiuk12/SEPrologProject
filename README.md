@@ -16,37 +16,37 @@ Nalezy ustawic nastepujace zmienne srodowiskowe:
 ## Opis
 Projekt zawiera pomoc w znadywaniu filmow zaleznych od usposobienia oraz od cech charakteru czlowieka. Dopasowanie zawiera sie w ponizszej tabeli:
 
-| Administrator | Adwokat | Animator | Artysta | Doradca | Dyrektor | Entuzjasta | Idealista | Innowator | Inspektor | Logik | Mentor | Opiekun | Praktyk | Prezenter | Choleryk | Flegmatyk | Melancholik | Sangwinik |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| TAK |  |  |  |  |  |  |  |  |  |  |  |  |  |  | TAK |  |  |  |
-|  |  |  |  | TAK |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |  |  |  |  | TAK |  |  |  | TAK |  |  |
-|  | TAK |  |  |  |  |  |  |  |  |  | TAK |  |  | TAK | TAK | TAK | TAK |  |
-| TAK | TAK | TAK |  |  |  | TAK |  | TAK |  |  |  |  |  | TAK | TAK | NIE |  | TAK |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | TAK |  |  |
-|  | TAK |  | TAK | TAK |  | TAK |  |  |  |  |  |  | TAK |  |  |  |  | TAK |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-|  |  | TAK | TAK | TAK | TAK |  |  |  | NIE | TAK |  |  |  | TAK | TAK |  | TAK | TAK |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | TAK |  |  |  |
-| TAK |  | TAK |  | NIE | TAK |  | TAK |  | TAK | TAK | TAK |  |  |  |  | TAK |  |  |
-| TAK |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-|  |  |  |  |  | TAK |  | NIE |  |  |  |  | NIE | TAK |  |  |  |  |  |
-| TAK | TAK |  | NIE |  | TAK | NIE | TAK | NIE | TAK |  | TAK | TAK | TAK | NIE | TAK |  |  | NIE |
-|  |  |  | TAK | TAK |  | TAK |  | TAK |  |  |  |  | TAK | TAK |  |  | NIE | TAK |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| TAK |  |  |  |  |  |  |  |  |  |  |  | TAK |  |  |  | TAK |  |  |
-|  |  |  |  |  |  |  |  |  |  |  |  | TAK |  | TAK |  |  |  |  |
-|  |  | TAK |  | NIE | TAK | NIE |  |  | TAK |  |  | TAK |  | NIE |  |  |  |  |
-| TAK |  | TAK |  | NIE | TAK |  | TAK |  | TAK | TAK |  |  |  |  |  |  |  |  |
-| TAK |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-|  |  |  |  | TAK |  | TAK | TAK |  |  |  |  | TAK |  |  |  |  |  |  |
-|  |  | TAK | TAK |  | NIE |  |  | TAK | NIE | NIE |  |  |  |  | TAK |  |  | TAK |
-| TAK | TAK |  |  |  | TAK | NIE |  | NIE | TAK |  | TAK |  | TAK | NIE |  | TAK |  |  |
-|  | TAK | TAK | TAK | TAK | NIE | TAK | TAK | TAK |  |  |  |  |  |  | NIE |  | NIE | TAK |
-|  |  |  | TAK |  | TAK | TAK |  | TAK | NIE | TAK | TAK |  |  |  |  |  | TAK | TAK |
-|  |  |  |  |  |  |  |  |  |  |  | TAK |  |  |  |  | NIE | NIE |  |
-|  |  |  | TAK |  |  |  | TAK |  | NIE |  | TAK |  |  |  | TAK | TAK | TAK | TAK |
-|  |  |  |  |  |  |  |  |  |  |  |  | TAK |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | TAK |  |  |  |
-| TAK | TAK | NIE | NIE |  | TAK | NIE |  |  | TAK |  |  | TAK |  |  |  | TAK | TAK |  |
+|  | Administrator | Adwokat | Animator | Artysta | Doradca | Dyrektor | Entuzjasta | Idealista | Innowator | Inspektor | Logik | Mentor | Opiekun | Praktyk | Prezenter | Choleryk | Flegmatyk | Melancholik | Sangwinik |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Bezpośredni | TAK |  |  |  |  |  |  |  |  |  |  |  |  |  |  | TAK |  |  |  |
+| Błyskotliwy |  |  |  |  | TAK |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| Cierpliwy |  |  |  |  |  |  |  |  |  |  |  |  | TAK |  |  |  | TAK |  |  |
+| Empatyczny |  | TAK |  |  |  |  |  |  |  |  |  | TAK |  |  | TAK | TAK | TAK | TAK |  |
+| Energiczny | TAK | TAK | TAK |  |  |  | TAK |  | TAK |  |  |  |  |  | TAK | TAK | NIE |  | TAK |
+| Enigmatyczny |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | TAK |  |  |
+| Entuzjastyczny |  | TAK |  | TAK | TAK |  | TAK |  |  |  |  |  |  | TAK |  |  |  |  | TAK |
+| Indywidualista |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| Inspirujący |  |  | TAK | TAK | TAK | TAK |  |  |  | NIE | TAK |  |  |  | TAK | TAK |  | TAK | TAK |
+| Kompetentny |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | TAK |  |  |  |
+| Logiczny | TAK |  | TAK |  | NIE | TAK |  | TAK |  | TAK | TAK | TAK |  |  |  |  | TAK |  |  |
+| Lojalny | TAK |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| Niezależny |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| Odporny na stres |  |  |  |  |  | TAK |  | NIE |  |  |  |  | NIE | TAK |  |  |  |  |  |
+| Odpowiedzialny | TAK | TAK |  | NIE |  | TAK | NIE | TAK | NIE | TAK |  | TAK | TAK | TAK | NIE | TAK |  |  | NIE |
+| Optymistyczny, pozytywnie nastawiony do życia |  |  |  | TAK | TAK |  | TAK |  | TAK |  |  |  |  | TAK | TAK |  |  | NIE | TAK |
+| Pewny siebie |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| Pracowity | TAK |  |  |  |  |  |  |  |  |  |  |  | TAK |  |  |  | TAK |  |  |
+| Praktyczny |  |  |  |  |  |  |  |  |  |  |  |  | TAK |  | TAK |  |  |  |  |
+| Przedsiębiorczy |  |  | TAK |  | NIE | TAK | NIE |  |  | TAK |  |  | TAK |  | NIE |  |  |  |  |
+| Racjonalny | TAK |  | TAK |  | NIE | TAK |  | TAK |  | TAK | TAK |  |  |  |  |  |  |  |  |
+| Rzeczowy, konkretny | TAK |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| Serdeczny |  |  |  |  | TAK |  | TAK | TAK |  |  |  |  | TAK |  |  |  |  |  |  |
+| Spontaniczny |  |  | TAK | TAK |  | NIE |  |  | TAK | NIE | NIE |  |  |  |  | TAK |  |  | TAK |
+| Sumienny, obowiązkowy | TAK | TAK |  |  |  | TAK | NIE |  | NIE | TAK |  | TAK |  | TAK | NIE |  | TAK |  |  |
+| Towarzyski, serdeczny |  | TAK | TAK | TAK | TAK | NIE | TAK | TAK | TAK |  |  |  |  |  |  | NIE |  | NIE | TAK |
+| Twórczy, pomysłowy |  |  |  | TAK |  | TAK | TAK |  | TAK | NIE | TAK | TAK |  |  |  |  |  | TAK | TAK |
+| Ufny |  |  |  |  |  |  |  |  |  |  |  | TAK |  |  |  |  | NIE | NIE |  |
+| Wrażliwy |  |  |  | TAK |  |  |  | TAK |  | NIE |  | TAK |  |  |  | TAK | TAK | TAK | TAK |
+| Wytrwały |  |  |  |  |  |  |  |  |  |  |  |  | TAK |  |  |  |  |  |  |
+| Zdystansowany |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | TAK |  |  |  |
+| Zorganizowany | TAK | TAK | NIE | NIE |  | TAK | NIE |  |  | TAK |  |  | TAK |  |  |  | TAK | TAK |  |
